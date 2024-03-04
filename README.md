@@ -1,10 +1,10 @@
 # Re-Code transition examples, from XML to JetPack
 This is an example of how I coded the old (New Product/Modify Existing Product) fragment from xml to JetPack Compose.
 
-The Old behavior of the XML approach is available at:
+The old behavior of the XML approach is available at:
 https://youtu.be/1Csy8rHNWUk
 
-The final video outcome showing the JetPack Policy page is at: 
+The final video outcome showing the JetPack version page is at: 
 https://youtu.be/IdM7i_pQ0Vc
 
 The code for the following rendered page is within the fragment_policy_fragment.xml file. 
@@ -15,7 +15,6 @@ A snippet of the old XML fragment is here:
 
 
 
-The code for the following rendered page is within the policy_fragment.kt file. 
 A snippet of the new code with JetPack Compose is here:
 
 ![studio64_EOM0TL3Lwt](https://github.com/hotellinawebmaster/SouvenirScoutJetPackNewProductFragment/assets/73776127/b362058c-cd2a-4a25-9740-e3beb7eaf5f6)
