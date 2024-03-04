@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_vendor_product_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".administration.Vendor_Product_Edit_FR">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/product_edit_contextual_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:background="@color/light_blue"
+        android:minHeight="40dp"
+        android:theme="@style/Theme.SouvenirMaster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxButtonHeight="40sp"
+        app:menu="@menu/contextual_bar_product_edit_menu" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_edit_contextual_toolbar"
+        tools:context=".administration.Vendor_Product_Edit_FR">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15sp">
+
+            <LinearLayout
+                android:id="@+id/title_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@color/light_blue"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/product_image_edit_xml"
+                    android:layout_width="100sp"
+                    android:layout_height="100sp"
+                    android:layout_marginLeft="8sp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="8sp"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/noimage150x150" />
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/product_title"
+                    style="?attr/textInputOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8sp"
+                    android:hint="Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/product_title_TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="textNoSuggestions|text"
+                        android:text="titlevalue"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/product_edit_text_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:background="@color/light_blue"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_linear">
+
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/product_description_xml"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="16dp"-->
+                <!--                    android:layout_marginTop="8dp"-->
+                <!--                    android:text="product description value"-->
+                <!--                    android:textSize="20sp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/description_label" />-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/product_description_xml"
+                    style="?attr/textInputOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginTop="8dp"
+                    android:hint="Description"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="183"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/product_description_xml_TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8sp"
+                        android:maxLines="5"
+                        android:text="descri ptionvalue descri ptionvalue descriptionvalue descriptio nvalue descri ptionvalue descripti onvalue"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/product_edit_text_size" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:background="@color/light_blue"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/weight_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8sp"
+                        android:focusable="false"
+                        android:text="Weight"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/product_edit_text_size"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/weight"
+                        style="?attr/textInputOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/weight_TextInputEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="5"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/product_edit_text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="16dp"
+                        android:spinnerMode="dropdown"
+                        android:tag="spinner_weight"
+                        android:theme="@style/Spinner" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+
+                    <TextView
+                        android:id="@+id/dimensions_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8sp"
+                        android:focusable="false"
+                        android:text="Dimensions"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/product_edit_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/weight_label" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/l_values"
+                        style="?attr/textInputOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:hint="L"
+                        android:inputType="number|text|numberDecimal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/l_values_TextInputEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="5"
+                            android:singleLine="false"
+                            android:text="L"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/product_edit_text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/w_values"
+                        style="?attr/textInputOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:hint="W"
+                        android:inputType="number|text|numberDecimal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/w_values_TextInputEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="5"
+                            android:singleLine="false"
+                            android:text="W"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/product_edit_text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/h_values"
+                        style="?attr/textInputOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:hint="H"
+                        android:inputType="number|text|numberDecimal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/h_values_TextInputEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="5"
+                            android:singleLine="false"
+                            android:text="H"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/product_edit_text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_dimensions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="8dp"
+                        android:dropDownWidth="wrap_content"
+                        android:spinnerMode="dropdown"
+                        android:tag="spinner_dimensions"
+                        android:theme="@style/Spinner" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:id="@+id/price_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8sp"
+                        android:layout_marginBottom="55sp"
+                        android:focusable="false"
+                        android:text="Price"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/product_edit_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dimensions_label" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        android:id="@+id/price"
+                        style="?attr/textInputOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/waystocontactyou_title_label">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/price_TextInputEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="number|numberDecimal"
+                            android:maxLines="1"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/product_edit_text_size" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/currency_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4sp"
+                        android:text="€"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/product_edit_text_size" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
